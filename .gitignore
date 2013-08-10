@@ -1,0 +1,100 @@
+#
+# NOTE! Don't add files that are generated in specific
+# subdirectories here. Add them in the ".gitignore" file
+# in that subdirectory instead.
+#
+# NOTE! Please use 'git ls-files -i --exclude-standard'
+# command after changing this file, to see if there are
+# any tracked files which get ignored after the change.
+#
+# Normal rules
+#
+.*
+*.o
+*.o.*
+*.a
+*.s
+*.ko
+*.so
+*.so.dbg
+*.mod.c
+*.i
+*.gitignore
+*.lst
+*.symtypes
+*.order
+modules.builtin
+*.elf
+*.bin
+*.bz2
+*.lzma
+*.xz
+*.lzo
+*.patch
+*.gcno
+
+#
+# Top-level generic files
+#
+/build
+/tags
+/TAGS
+/linux
+/vmlinux
+/vmlinuz
+/System.map
+/Module.markers
+/Module.symvers
+
+#
+# git files that we don't want to ignore even it they are dot-files
+#
+!.gitignore
+!.mailmap
+
+#
+# Generated include files
+#
+include/config
+include/linux/version.h
+include/generated
+arch/*/include/generated
+ics-ramdisk/cwm/boot.img
+ics-ramdisk/ics_combo/
+ics-ramdisk/ics_combo_b/
+ics-ramdisk/ics_combo_c/
+ics-ramdisk/ics_combo_v/
+ics-ramdisk/jb_combo/
+ics-ramdisk/jb_combo_b/
+ics-ramdisk/jb_combo_c/
+ics-ramdisk/jb_combo_v/
+ics-ramdisk/jbplus_combo/
+ics-ramdisk/jbplus_combo_b/
+ics-ramdisk/jbplus_combo_c/
+ics-ramdisk/jbplus_combo_v/
+
+
+# stgit generated dirs
+patches-*
+
+# quilt's files
+patches
+series
+ics-ramdisk/ics_combo/
+ics-ramdisk/ics_combo_b/
+ics-ramdisk/ics_combo_c/
+ics-ramdisk/ics_combo_v/
+
+# cscope files
+cscope.*
+ncscope.*
+
+# gnu global files
+GPATH
+GRTAGS
+GSYMS
+GTAGS
+
+*.orig
+*~
+\#*#
