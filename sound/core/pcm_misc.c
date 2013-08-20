@@ -139,6 +139,14 @@ static struct pcm_format_data pcm_formats[(INT)SNDRV_PCM_FORMAT_LAST+1] = {
 		.width = 5, .phys = 5, .le = -1, .signd = -1,
 		.silence = {},
 	},
+	[SNDRV_PCM_FORMAT_DSD_U8] = {
+		.width = 8, .phys = 8, .le = 1, .signd = 0,
+		.silence = {},
+	},
+	[SNDRV_PCM_FORMAT_DSD_U16_LE] = {
+		.width = 16, .phys = 16, .le = 1, .signd = 0,
+		.silence = {},
+	},
 	/* FIXME: the following three formats are not defined properly yet */
 	[SNDRV_PCM_FORMAT_MPEG] = {
 		.le = -1, .signd = -1,
@@ -487,3 +495,21 @@ unsigned int snd_pcm_rate_to_rate_bit(unsigned int rate)
 	return SNDRV_PCM_RATE_KNOT;
 }
 EXPORT_SYMBOL(snd_pcm_rate_to_rate_bit);
+
+/**
+ * snd_pcm_rate_bit_to_rate - converts SNDRV_PCM_RATE_xxx bit to sample rate
+ * @rate_bit: the rate bit to convert
+ *
+ * Returns the sample rate that corresponds to the given SNDRV_PCM_RATE_xxx flag
+ * or 0 for an unknown rate bit
+ */
+unsigned int snd_pcm_rate_bit_to_rate(unsigned int rate_bit)
+{
+	unsigned int i;
+
+	for (i = 0; i < snd_pcm_known_rates.count; i++)
+		if ((1u << i) == rate_bit)
+			return snd_pcm_known_rates.list[i];
+	return 0;
+}
+EXPORT_SYMBOL(snd_pcm_rate_bit_to_rate);

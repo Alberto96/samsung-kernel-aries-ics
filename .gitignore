@@ -61,18 +61,11 @@ include/generated
 arch/*/include/generated
 ics-ramdisk/cwm/boot.img
 ics-ramdisk/ics_combo/
-ics-ramdisk/ics_combo_b/
-ics-ramdisk/ics_combo_c/
 ics-ramdisk/ics_combo_v/
-ics-ramdisk/jb_combo/
-ics-ramdisk/jb_combo_b/
-ics-ramdisk/jb_combo_c/
-ics-ramdisk/jb_combo_v/
-ics-ramdisk/jbplus_combo/
-ics-ramdisk/jbplus_combo_b/
-ics-ramdisk/jbplus_combo_c/
-ics-ramdisk/jbplus_combo_v/
-
+ics-ramdisk/ics_rec_init/
+ics-ramdisk/ics_rec_init_v/
+ics-ramdisk/ics_rec_init_c/
+ics-ramdisk/ics_rec_init_b/
 
 # stgit generated dirs
 patches-*
@@ -80,10 +73,6 @@ patches-*
 # quilt's files
 patches
 series
-ics-ramdisk/ics_combo/
-ics-ramdisk/ics_combo_b/
-ics-ramdisk/ics_combo_c/
-ics-ramdisk/ics_combo_v/
 
 # cscope files
 cscope.*
