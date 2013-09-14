@@ -4,35 +4,35 @@ case "$1" in
         galaxys)
             VARIANT="galaxys"
             VER=""
-	    BASE_SEMA_VER="GearKernel_ICS_GalaxyS_1.0.7"
+	    BASE_SEMA_VER="GearKernel_ICS_GalaxyS_1.0.8"
 	    cp -r ics-ramdisk/ics_rec_init ics-ramdisk/ics_combo/ics_rec_init
             ;;
 
         galaxysb)
             VARIANT="galaxysb"
             VER="b"
-	    BASE_SEMA_VER="GearKernel_ICS_GalaxySB_1.0.7"
+	    BASE_SEMA_VER="GearKernel_ICS_GalaxySB_1.0.8"
 	    cp -r ics-ramdisk/ics_rec_init_b ics-ramdisk/ics_combo/ics_rec_init
             ;;
 
         captivate)
             VARIANT="captivate"
             VER="c"
-	    BASE_SEMA_VER="GearKernel_ICS_Captivate_1.0.7"
+	    BASE_SEMA_VER="GearKernel_ICS_Captivate_1.0.8"
 	    cp -r ics-ramdisk/ics_rec_init_c ics-ramdisk/ics_combo/ics_rec_init
             ;;
 
         vibrant)
             VARIANT="vibrant"
             VER="v"
-	    BASE_SEMA_VER="GearKernel_ICS_Vibrant_1.0.7"
+	    BASE_SEMA_VER="GearKernel_ICS_Vibrant_1.0.8"
 	    cp -r ics-ramdisk/ics_rec_init_v ics-ramdisk/ics_combo_v/ics_rec_init
             ;;
 
         *)
             VARIANT="galaxys"
             VER=""
-	    BASE_SEMA_VER="GearKernel_ICS_GalaxyS_1.0.7"
+	    BASE_SEMA_VER="GearKernel_ICS_GalaxyS_1.0.8"
 	    cp -r ics-ramdisk/ics_rec_init ics-ramdisk/ics_combo/ics_rec_init
 esac
 
@@ -45,7 +45,7 @@ SEMA_VER=$BASE_SEMA_VER$VER
 #export KBUILD_BUILD_VERSION="2"
 export LOCALVERSION="-"`echo $SEMA_VER`
 #export CROSS_COMPILE=/opt/toolchains/gcc-linaro-arm-linux-gnueabihf-2012.09-20120921_linux/bin/arm-linux-gnueabihf-
-export CROSS_COMPILE=~/semaphore/toolchain/arm-cortex_a8-linux-gnueabi-linaro_4.7.4-2013.08/bin/arm-gnueabi-
+export CROSS_COMPILE=~/semaphore/toolchain/arm-cortex_a8-linux-gnueabi-linaro_4.7.4-2013.09/bin/arm-gnueabi-
 export ARCH=arm
 
 echo 
