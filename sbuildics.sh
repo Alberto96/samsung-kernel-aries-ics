@@ -4,7 +4,7 @@ case "$1" in
         galaxys)
             VARIANT="galaxys"
             VER=""
-	    BASE_SEMA_VER="GearKernel_ICS_GalaxyS_1.0.9"
+	    BASE_SEMA_VER="GearKernel_ICS_GalaxyS_1.0.9v2"
 	    cp -rf ics-ramdisk/ics_rec_init ics-ramdisk/ics_combo/ics_rec_init
 	    cp -rf ics-ramdisk/init.d ics-ramdisk/ics_combo/files/
             ;;
@@ -12,7 +12,7 @@ case "$1" in
         galaxysb)
             VARIANT="galaxysb"
             VER="b"
-	    BASE_SEMA_VER="GearKernel_ICS_GalaxySB_1.0.9"
+	    BASE_SEMA_VER="GearKernel_ICS_GalaxySB_1.0.9v2"
 	    cp -rf ics-ramdisk/ics_rec_init_b ics-ramdisk/ics_combo/ics_rec_init
 	    cp -rf ics-ramdisk/init.d ics-ramdisk/ics_combo/files/
             ;;
@@ -20,7 +20,7 @@ case "$1" in
         captivate)
             VARIANT="captivate"
             VER="c"
-	    BASE_SEMA_VER="GearKernel_ICS_Captivate_1.0.9"
+	    BASE_SEMA_VER="GearKernel_ICS_Captivate_1.0.9v2"
 	    cp -rf ics-ramdisk/ics_rec_init_c ics-ramdisk/ics_combo/ics_rec_init
 	    cp -rf ics-ramdisk/init.d ics-ramdisk/ics_combo/files/
             ;;
@@ -28,7 +28,7 @@ case "$1" in
         vibrant)
             VARIANT="vibrant"
             VER="v"
-	    BASE_SEMA_VER="GearKernel_ICS_Vibrant_1.0.9"
+	    BASE_SEMA_VER="GearKernel_ICS_Vibrant_1.0.9v2"
 	    cp -rf ics-ramdisk/ics_rec_init_v ics-ramdisk/ics_combo_v/ics_rec_init
 	    cp -rf ics-ramdisk/init.d ics-ramdisk/ics_combo_v/files/
             ;;
@@ -36,7 +36,7 @@ case "$1" in
         *)
             VARIANT="galaxys"
             VER=""
-	    BASE_SEMA_VER="GearKernel_ICS_GalaxyS_1.0.9"
+	    BASE_SEMA_VER="GearKernel_ICS_GalaxyS_1.0.9v2"
 	    cp -rf ics-ramdisk/ics_rec_init ics-ramdisk/ics_combo/ics_rec_init
 	    cp -rf ics-ramdisk/init.d ics-ramdisk/ics_combo/files/
 esac
