@@ -4,7 +4,7 @@ case "$1" in
         galaxys)
             VARIANT="galaxys"
             VER=""
-	    BASE_SEMA_VER="GearKernel_ICS_GalaxyS_1.0.9v2"
+	    BASE_SEMA_VER="GearKernel_ICS_GalaxyS_1.1.0"
 	    cp -rf ics-ramdisk/ics_rec_init ics-ramdisk/ics_combo/ics_rec_init
 	    cp -rf ics-ramdisk/init.d ics-ramdisk/ics_combo/files/
             ;;
@@ -12,7 +12,7 @@ case "$1" in
         galaxysb)
             VARIANT="galaxysb"
             VER="b"
-	    BASE_SEMA_VER="GearKernel_ICS_GalaxySB_1.0.9v2"
+	    BASE_SEMA_VER="GearKernel_ICS_GalaxySB_1.1.0"
 	    cp -rf ics-ramdisk/ics_rec_init_b ics-ramdisk/ics_combo/ics_rec_init
 	    cp -rf ics-ramdisk/init.d ics-ramdisk/ics_combo/files/
             ;;
@@ -20,7 +20,7 @@ case "$1" in
         captivate)
             VARIANT="captivate"
             VER="c"
-	    BASE_SEMA_VER="GearKernel_ICS_Captivate_1.0.9v2"
+	    BASE_SEMA_VER="GearKernel_ICS_Captivate_1.1.0"
 	    cp -rf ics-ramdisk/ics_rec_init_c ics-ramdisk/ics_combo/ics_rec_init
 	    cp -rf ics-ramdisk/init.d ics-ramdisk/ics_combo/files/
             ;;
@@ -28,7 +28,7 @@ case "$1" in
         vibrant)
             VARIANT="vibrant"
             VER="v"
-	    BASE_SEMA_VER="GearKernel_ICS_Vibrant_1.0.9v2"
+	    BASE_SEMA_VER="GearKernel_ICS_Vibrant_1.1.0"
 	    cp -rf ics-ramdisk/ics_rec_init_v ics-ramdisk/ics_combo_v/ics_rec_init
 	    cp -rf ics-ramdisk/init.d ics-ramdisk/ics_combo_v/files/
             ;;
@@ -36,7 +36,7 @@ case "$1" in
         *)
             VARIANT="galaxys"
             VER=""
-	    BASE_SEMA_VER="GearKernel_ICS_GalaxyS_1.0.9v2"
+	    BASE_SEMA_VER="GearKernel_ICS_GalaxyS_1.1.0"
 	    cp -rf ics-ramdisk/ics_rec_init ics-ramdisk/ics_combo/ics_rec_init
 	    cp -rf ics-ramdisk/init.d ics-ramdisk/ics_combo/files/
 esac
@@ -87,7 +87,7 @@ fi
 make -j3 modules
 
 rm `echo $MODULES_DIR"/*"`
-find $KERNEL_DIR -name '*.ko' -exec cp -v {} $MODULES_DIR \;
+find $KERNEL_DIR -name '*.ko' -exec cp -rfv {} $MODULES_DIR \;
 chmod 644 `echo $MODULES_DIR"/*"`
 
 make -j3 zImage
@@ -104,8 +104,24 @@ zip -r `echo $SEMA_VER`.zip *
 mv  `echo $SEMA_VER`.zip ../../$OUTPUT_DIR$VARIANT"/"
 
 cd ../../
-rm -r ics-ramdisk/ics_combo/ics_rec_init
-rm -r ics-ramdisk/ics_combo_v/ics_rec_init
+
+
+case "$1" in
+        galaxys)
+		rm -r ics-ramdisk/ics_combo/ics_rec_init
+		;;
+	galaxysb)
+		rm -r ics-ramdisk/ics_combo/ics_rec_init
+		;;
+	captivate)
+		rm -r ics-ramdisk/ics_combo/ics_rec_init
+		;;
+	vibrant)
+		rm -r ics-ramdisk/ics_combo_v/ics_rec_init
+		;;
+        *)
+		rm -r ics-ramdisk/ics_combo/ics_rec_init
+esac
 
 DATE_END=$(date +"%s")
 echo
