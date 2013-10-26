@@ -33,7 +33,7 @@ While you are still in ~/gearkernel directory do the following.
 
 Clone the main kernel repository branch master (ICS):
 
-git clone -b master git://github.com/Alberto96/samsung-kernel-aries-ics
+git clone -b ics git://github.com/Alberto96/samsung-kernel-aries-ics
 
 Due to the fact that github does not preserve file permissions, I also included
 initramfs for each SGS variant as a tarball. You need to do the following 
@@ -59,7 +59,7 @@ tar zxvf ics_combo_v.tar.gz
 
 You need to set the correct toolchain path:
 
-1) Open with gedit sbuildjb.sh and sbuildjbplus.sh located in samsung-kernel-aries folder and search this string : export CROSS_COMPILE=
+1) Open with gedit sbuildics.sh located in samsung-kernel-aries folder and search this string : export CROSS_COMPILE=
 2) Edit the path after the = and change it with your toolchain/bin path
 
 Example :
@@ -108,7 +108,7 @@ cd ~/gearkernel/samsung-kernel-aries
 and for 's' version:
 ./sbuildics galaxys s
 
-Wait few minutes (time depends on the machine - on my laptop 15-20) and hopefully 
+Wait few minutes (time depends on the machine - on my build machine 4-5 minutes) and hopefully 
 the compilation will end.
 Watch the output for possible errors. A successful compilation must NOT have any
 error. It may have some warnings, but you can safely ignore them. 
