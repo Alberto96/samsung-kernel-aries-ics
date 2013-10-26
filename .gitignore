@@ -59,6 +59,7 @@ include/linux/version.h
 include/generated
 arch/*/include/generated
 ics-ramdisk/cwm/boot.img
+ics-ramdisk/cwm_s_ics/boot.img
 ics-ramdisk/ics_combo/
 ics-ramdisk/ics_combo_v/
 ics-ramdisk/ics_rec_init/
