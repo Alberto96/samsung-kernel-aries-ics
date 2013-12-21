@@ -50,7 +50,7 @@ SEMA_VER=$BASE_SEMA_VER$VER
 #export KBUILD_BUILD_VERSION="2"
 export LOCALVERSION="-"`echo $SEMA_VER`
 #export CROSS_COMPILE=/opt/toolchains/gcc-linaro-arm-linux-gnueabihf-2012.09-20120921_linux/bin/arm-linux-gnueabihf-
-export CROSS_COMPILE=~/semaphore/toolchain/arm-cortex_a8-linux-gnueabi-gearlinaro_4.7.4-2013.11/bin/arm-gnueabi-
+export CROSS_COMPILE=~/semaphore/toolchain/arm-cortex_a8-linux-gnueabi-gearlinaro_4.8.3-2013.11/bin/arm-gnueabi-
 export ARCH=arm
 
 echo 
